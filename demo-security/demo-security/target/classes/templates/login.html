@@ -2,7 +2,7 @@
 <html lang="pt" xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Clínica Spring Security ::: Login</title>
+    <title>Clínica Spring Security | Login</title>
     <meta charset="UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -38,8 +38,8 @@
              width="72" height="72">
         <h1 class="h3 mb-3 font-weight-normal">Clínica Spring Security</h1>
 
-        <p class="font-weight-lighter">Seja bem-vindo.</p>
-        <p class="text-muted">Realize seu login para continuar</p>
+        <p class="font-weight-lighter">Boas Vindas!</p>
+        <p class="text-muted">Faça login para acessar o sistema</p>
         <div th:if="${alerta != null}" th:class="${alerta == 'erro'} ? 'alert alert-danger' : 'alert alert-success'"
              role="alert">
             <h4 th:text="${titulo}" class="alert-heading">Credenciais...</h4>
@@ -78,7 +78,7 @@
         <a class="flex-sm-fill text-sm-left nav-link text-decoration-none" th:href="@{/}"><i class="fas fa-home"></i>&nbsp;Home</a>
     </nav>
     <p class="mt-5 mb-3 text-muted text-center">Clínica Spring
-        Security&copy; 2019</p>
+        Security&copy; 2023</p>
 </form>
 </body>
 </html>

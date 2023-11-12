@@ -25,6 +25,7 @@ public class Usuario extends AbstractEntity {
         joinColumns = { @JoinColumn(name = "usuario_id", referencedColumnName = "id") }, 
         inverseJoinColumns = { @JoinColumn(name = "perfil_id", referencedColumnName = "id") }
 	)
+
 	private List<Perfil> perfis;
 	
 	@Column(name = "ativo", nullable = false, columnDefinition = "TINYINT(1)")

@@ -26,6 +26,7 @@ public class UsuarioService implements UserDetailsService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         Usuario usuario = buscaPorEmail(s);
 

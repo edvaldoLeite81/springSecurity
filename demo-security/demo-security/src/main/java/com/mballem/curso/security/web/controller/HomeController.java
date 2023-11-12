@@ -24,7 +24,7 @@ public class HomeController {
     public String logirnError(ModelMap model) {
         model.addAttribute("alerta","erro");
         model.addAttribute("titulo","Credenciais Inválidas");
-        model.addAttribute("texto","Usuário ou senha errada, revise e tente novamente.");
+        model.addAttribute("texto","Usuário e/ou senha incorreta(s). Por favor, revise e tente novamente.");
         model.addAttribute("subtexto","Acesso permitido apenas para cadastros já ativados");
 
         return "login";

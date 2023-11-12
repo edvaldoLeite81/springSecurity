@@ -1,0 +1,3 @@
+usuário: eguilhermeleite@gmail.com
+senha: ilovejava
+criptog: $2a$10$tCCITok3L39vis3B42hQreCiCV3nLljD0aqpaV0hc7Dprvj4dTPuW
