@@ -27,20 +27,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/medicos/**").hasAuthority("MEDICO")
 
                 .anyRequest().authenticated()
+
                 .and()
                 .formLogin()
                 .loginPage("/login")
-                .defaultSuccessUrl("/" , true)
+                .defaultSuccessUrl("/", true)
                 .failureUrl("/login-error")
                 .permitAll()
+
                 .and()
                 .logout()
-                .logoutSuccessUrl("/");
-    }
+                .logoutSuccessUrl("/")
+
+                .and()
+                .exceptionHandling()
+                .accessDeniedPage("/acesso-negado");
+
+    }//configure
 
     @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception{
-            auth.userDetailsService(usuarioService).passwordEncoder(new BCryptPasswordEncoder());
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(usuarioService).passwordEncoder(new BCryptPasswordEncoder());
     }
 
 }

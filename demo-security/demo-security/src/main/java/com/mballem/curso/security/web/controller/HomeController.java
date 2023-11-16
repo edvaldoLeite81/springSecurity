@@ -4,6 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import javax.servlet.http.HttpServletResponse;
+
 @Controller
 public class HomeController {
 
@@ -28,5 +30,17 @@ public class HomeController {
         model.addAttribute("subtexto","Acesso permitido apenas para cadastros já ativados");
 
         return "login";
+    }
+
+
+    // acesso negado
+    @GetMapping({"/acesso-negado"})
+    public String acessoNegado(ModelMap model, HttpServletResponse response) {
+        model.addAttribute("status",response.getStatus());
+        model.addAttribute("error","Forbidden");
+        model.addAttribute("message","O servidor entendeu a solicitação, mas se recusa a autorizá-la.");
+
+
+        return "error";
     }
 }
